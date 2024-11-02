@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Dokku - Mode Gelap</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        .card {
+            background-color: #1e1e1e;
+            border: none;
+        }
+        .btn {
+            margin-top: 10px;
+        }
+        .form-control {
+            background-color: #2a2a2a;
+            color: #ffffff;
+            border: 1px solid #444;
+        }
+        .form-control::placeholder {
+            color: #888;
+        }
+        .btn-primary, .btn-secondary, .btn-success {
+            border: none;
+        }
+        .container h1, .container p {
+            color: #ffffff;
+        }
+        label {
+            color: #cccccc;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container mt-5">
+        <div class="text-center mb-4">
+            <h1 class="display-4">Aplikasi Perhitungan</h1>
+            <p class="lead">Made by: Joselin Permata Aprillia & Fitria Dwi Cahya</p>
+        </div>
+
+     
+        <section id="persegi" class="mb-4 hidden card p-4">
+            <h2 class="card-title">Luas Persegi</h2>
+            <div class="form-group">
+                <label for="sisiPersegi">Masukkan panjang sisi:</label>
+                <input type="number" id="sisiPersegi" class="form-control" placeholder="Masukkan panjang sisi">
+            </div>
+            <button class="btn btn-success" onclick="hitungLuasPersegi()">Hitung</button>
+            <p id="hasilPersegi" class="mt-3"></p>
+        </section>
+
+        <section id="kubus" class="hidden card p-4">
+            <h2 class="card-title">Luas Permukaan Kubus</h2>
+            <div class="form-group">
+                <label for="sisiKubus">Masukkan panjang sisi:</label>
+                <input type="number" id="sisiKubus" class="form-control" placeholder="Masukkan panjang sisi">
+            </div>
+            <button class="btn btn-success" onclick="hitungLuasKubus()">Hitung</button>
+            <p id="hasilKubus" class="mt-3"></p>
+        </section>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
